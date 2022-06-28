@@ -1,37 +1,16 @@
-<!--<div class="container px-5 px-sm0">-->
-<!--   <div class="row">-->
-<!--     <div class="col-lg-4"> -->
-<!--     <%#= render partial: 'books/form', locals: { user: @user, book: @new_book } %>-->
-<!--     </div>-->
-
-<!--     <div class="col-lg-8"> -->
-<!--     <h1>Books</h1>-->
-<!--     <%# @users .each do |user| %>-->
-<!--      <p>投稿ユーザー画像：<%#= image_tag user.get_profile_image(100,100) %></p>-->
-
-<!--      <p>Title</p>-->
-<!--      <span><%#=link_to user.name, user_path(user.id) %></span>-->
-  
-<!--      <p>Opinion</p>-->
-<!--      <span><%#=link_to user.introduction, user_path(user.id) %></span>-->
-<!--    <%# end %>-->
-<!--    </div>-->
-<!--   </div>-->
-<!--</div>-->
-
-<% if @book.errors.any? %>
-<%= @book.errors.count %>error prohibited this obj from being saved:
-<ul>
-  <% @book.errors.full_messages.each do |message| %>
-  <li><%= message %></li>
-  <% end %>
-</ul>
-<% end %>
+<!--<%# if @book.errors.any? %>-->
+<!--<%#= @book.errors.count %>error prohibited this obj from being saved:-->
+<!--<ul>-->
+<!--  <%# @book.errors.full_messages.each do |message| %>-->
+<!--  <li><%#= message %></li>-->
+<!--  <%# end %>-->
+<!--</ul>-->
+<!--<%# end %>-->
 
 <div class="container px-5 px-sm-0">
    <div class="row">
     <div class="col-md-3">
-    <%= render partial: 'books/form', locals: { user: @user, book: @new_book } %>
+    <%= render partial: 'books/form', locals: { user: @user, book: @book } %>
     </div>
     
     <div class="col-md-8 offset-md-1"> 
